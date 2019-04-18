@@ -3,13 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		9CD00EDE226898FC000F33AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD00EDD226898FC000F33AB /* AppDelegate.swift */; };
 		9CD00EE0226898FC000F33AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD00EDF226898FC000F33AB /* ViewController.swift */; };
-		9CD00EE3226898FC000F33AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CD00EE1226898FC000F33AB /* Main.storyboard */; };
 		9CD00EE5226898FF000F33AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CD00EE4226898FF000F33AB /* Assets.xcassets */; };
 		9CD00EE8226898FF000F33AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CD00EE6226898FF000F33AB /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -18,7 +17,6 @@
 		9CD00EDA226898FC000F33AB /* viperToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = viperToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CD00EDD226898FC000F33AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CD00EDF226898FC000F33AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9CD00EE2226898FC000F33AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9CD00EE4226898FF000F33AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9CD00EE7226898FF000F33AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9CD00EE9226898FF000F33AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,14 +52,61 @@
 		9CD00EDC226898FC000F33AB /* viperToDoList */ = {
 			isa = PBXGroup;
 			children = (
-				9CD00EDD226898FC000F33AB /* AppDelegate.swift */,
+				9CD00EF622689C9B000F33AB /* Core */,
+				9CD00EFA22689CBB000F33AB /* Flows */,
+				9CD00EF822689CA6000F33AB /* Services */,
+				9CD00EFB22689CBF000F33AB /* SupportingFiles */,
 				9CD00EDF226898FC000F33AB /* ViewController.swift */,
-				9CD00EE1226898FC000F33AB /* Main.storyboard */,
+			);
+			path = viperToDoList;
+			sourceTree = "<group>";
+		};
+		9CD00EF622689C9B000F33AB /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				9CD00EF722689C9F000F33AB /* AppDelegate */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		9CD00EF722689C9F000F33AB /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				9CD00EDD226898FC000F33AB /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		9CD00EF822689CA6000F33AB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9CD00EF922689CAA000F33AB /* AppStartManager */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9CD00EF922689CAA000F33AB /* AppStartManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AppStartManager;
+			sourceTree = "<group>";
+		};
+		9CD00EFA22689CBB000F33AB /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		9CD00EFB22689CBF000F33AB /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
 				9CD00EE4226898FF000F33AB /* Assets.xcassets */,
 				9CD00EE6226898FF000F33AB /* LaunchScreen.storyboard */,
 				9CD00EE9226898FF000F33AB /* Info.plist */,
 			);
-			path = viperToDoList;
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -100,7 +145,7 @@
 				};
 			};
 			buildConfigurationList = 9CD00ED5226898FC000F33AB /* Build configuration list for PBXProject "viperToDoList" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -124,7 +169,6 @@
 			files = (
 				9CD00EE8226898FF000F33AB /* LaunchScreen.storyboard in Resources */,
 				9CD00EE5226898FF000F33AB /* Assets.xcassets in Resources */,
-				9CD00EE3226898FC000F33AB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,14 +187,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9CD00EE1226898FC000F33AB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9CD00EE2226898FC000F33AB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9CD00EE6226898FF000F33AB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -284,7 +320,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 73YFFUD89Y;
-				INFOPLIST_FILE = viperToDoList/Info.plist;
+				INFOPLIST_FILE = viperToDoList/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +338,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 73YFFUD89Y;
-				INFOPLIST_FILE = viperToDoList/Info.plist;
+				INFOPLIST_FILE = viperToDoList/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
